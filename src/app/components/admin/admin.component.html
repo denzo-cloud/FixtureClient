@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="text-center">REGISTRO DE USUARIOS</h4>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <ul *ngFor="let user of users" class="list-group"> 
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge badge-primary"><i class="fas fa-user-shield"></i></span> {{ user.name }} 
+                                </div>
+                                <div class="col text-center">
+                                    <button routerLink="/detailadmin" class="btn btn-light"><i class="fas fa-arrow-right"></i></button>
+                                </div> 
+                            </div>
+                        </li>   
+                    </ul>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

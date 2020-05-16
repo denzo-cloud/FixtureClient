@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="text-center">DETALLE DESAFIO</h4>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <h5 class="text-center"><i class="fas fa-shield-alt"></i> Team Ekeko <span class="badge badge-success">Local</span></h5>
+                </div>
+                <div class="col-4">
+                    <h2 class="text-center">0-4</h2>
+                </div>
+                <div class="col-4">
+                    <h5 class="text-center"><i class="fas fa-shield-alt"></i> Team Rashberry <span class="badge badge-success">Visitante</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Jugadores Local</th>
+                        <th>Jugadores Visitante</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let student of students">
+                    <tr>
+                        <td><span class="badge badge-primary"><i class="fas fa-walking"></i></span> {{ student.apellidosYnombres }}</td>
+                        <td><span class="badge badge-primary"><i class="fas fa-walking"></i></span> {{ student.apellidosYnombres }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

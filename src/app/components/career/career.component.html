@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="card mt-4">
+      <div class="card-body">
+        <h4 class="text-center">REGISTRO DE CARRERAS</h4>
+      </div>
+    </div>
+    <div class="card mt-4">
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="inputCarrera" class="col-sm-2 col-form-label">Carrera Profesional</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="inputCarrera">
+            </div>
+            <button class="btn btn-primary m-1"><i class="far fa-save"></i> Guardar</button>
+            <button class="btn btn-danger m-1"><i class="fas fa-trash-alt"></i> Eliminar</button>
+          </div>   
+        </form>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">N</th>
+              <th scope="col">Carrera Profesional</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let carrera of carreras">
+            <tr>
+              <th scope="row">{{carrera.number}}</th>
+              <td>{{carrera.descripcion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card mt-4">
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="inputSeccion" class="col-sm-2 col-form-label">Seccion</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="inputSeccion">
+            </div>
+            <button class="btn btn-primary m-1"><i class="far fa-save"></i> Guardar</button>
+            <button class="btn btn-danger m-1"><i class="fas fa-trash-alt"></i> Eliminar</button>
+          </div>
+        </form>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">N°</th>
+              <th scope="col">Sección</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let seccion of secciones">
+            <tr>
+              <th scope="row">{{seccion.number}}</th>
+              <td>{{seccion.descripcion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div> 
