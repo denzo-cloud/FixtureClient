@@ -15,21 +15,24 @@ export class ChallengeComponent implements OnInit {
 
   hideone:boolean = false;
   hidetwo:boolean = true;
+  hidethree:boolean = true;
 
   hidefase():void {
-    this.hideone= true;
-    this.hidetwo= false;
+    this.hideone= false;
+    this.hidetwo= true;
+    this.hidethree = true;
   }
 
   viewfase():void {
     this.hideone= true;
     this.hidetwo= false;
+    this.hidethree = true;
   }
 
-  hide():void {
-    this.hideone= false;
+  hide3():void {
+    this.hideone= true;
     this.hidetwo= true;
+    this.hidethree= false;
   }
   
-
 }
