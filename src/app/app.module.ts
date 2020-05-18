@@ -15,6 +15,7 @@ import { DetailteamComponent } from './components/detailteam/detailteam.componen
 import { DetailchallengeComponent } from './components/detailchallenge/detailchallenge.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { DetailadminComponent } from './components/detailadmin/detailadmin.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DetailadminComponent } from './components/detailadmin/detailadmin.compo
     DetailteamComponent,
     DetailchallengeComponent,
     AdminComponent,
-    DetailadminComponent
+    DetailadminComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
