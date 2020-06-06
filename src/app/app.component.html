@@ -1,2 +1,17 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+
+<button 
+    (click)="iniciarSesion($event)"
+    type="button">Iniciar sesion</button>
+
+<hr>
+<span>
+    Esta autenticado? : {{ authService.logIn }}
+</span>
+<hr>
+<button (click)="traerInfo($event)" type="button">Solicitar mi info</button>
+<hr>
+Mi info es: {{ info | json }}
+<hr>
+Email: {{ info.email }}

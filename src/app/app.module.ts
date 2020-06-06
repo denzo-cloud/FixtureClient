@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +18,7 @@ import { DetailchallengeComponent } from './components/detailchallenge/detailcha
 import { AdminComponent } from './components/admin/admin.component';
 import { DetailadminComponent } from './components/detailadmin/detailadmin.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
