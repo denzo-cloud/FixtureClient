@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './components/home/home.component';
 import { StudentComponent } from './components/student/student.component';
 import { TeamComponent } from './components/team/team.component';
@@ -18,7 +19,7 @@ import { DetailchallengeComponent } from './components/detailchallenge/detailcha
 import { AdminComponent } from './components/admin/admin.component';
 import { DetailadminComponent } from './components/detailadmin/detailadmin.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+   ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
