@@ -23,7 +23,7 @@ export class PersonaService {
     return formBody.join('&');
   }
   index() {
-    return this.http.get(this.api + "api/auth/personas", {});
+    return this.http.get(this.api + "api/auth/personas/android", {});
   }
   show(id:number) {
     return this.http.get(this.api + "api/auth/personas/" + id, {});
