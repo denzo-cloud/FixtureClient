@@ -1,0 +1,69 @@
+<div class="panel shadow mt-3" >
+    <div class="header">
+      <h2 class="title"><i class="fas fa-volleyball-ball"></i> EDITAR PERSONA</h2>
+    </div>
+    <div class="inside">
+        <form [formGroup]="formEdit"
+          (submit)="onSubmit()">
+          <div class="form-group">
+            <label>
+              Codigo
+            </label>
+            <input type="text" 
+              formControlName="codigo"
+              class="form-control">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>
+                Nombre
+              </label>
+              <input type="text" 
+                formControlName="nombre"
+                class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+              <label>
+                Apellido
+              </label>
+              <input type="text" 
+                formControlName="apellido"
+                class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>
+                Dni
+              </label>
+              <input type="text" 
+                formControlName="dni"
+                class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+              <label>
+                Teléfono
+              </label>
+              <input type="text" 
+                formControlName="telefono"
+                class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>
+              Foto
+            </label>
+            <input type="text" 
+              formControlName="foto"
+              class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary mr-2">
+            Actualizar
+          </button>
+          <button type="button" class="btn btn-warning mr-2" [routerLink]="['/admin/persona']">
+            Cancelar
+          </button>
+          <button (click)="delete()" class="btn btn-danger" type="button">Eliminar</button>
+        </form>
+    </div>
+</div>

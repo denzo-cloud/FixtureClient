@@ -1,0 +1,91 @@
+<div class="panel shadow mt-3" >
+  <div class="header">
+    <h2 class="title"><i class="fas fa-volleyball-ball"></i> REGISTRO PERSONA</h2>
+  </div>
+  <div class="inside">
+
+    <form (submit)="crearPersona()"
+      [formGroup]="newPersonaForm"
+      *ngIf="crud_operation.is_visible">
+      <div class="form-group">
+        <label>
+          Codigo
+        </label>
+        <input type="text" 
+          formControlName="codigo"
+          class="form-control">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>
+            Nombre
+          </label>
+          <input type="text" 
+            formControlName="nombre"
+            class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label>
+            Apellido
+          </label>
+          <input type="text" 
+            formControlName="apellido"
+            class="form-control">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>
+            Dni
+          </label>
+          <input type="text" 
+            formControlName="dni"
+            class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label>
+            Teléfono
+          </label>
+          <input type="text" 
+            formControlName="telefono"
+            class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>
+          Foto
+        </label>
+        <input type="text" 
+          formControlName="foto"
+          class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary mr-2">
+        Registrar
+      </button>
+      <button type="button" class="btn btn-danger" (click)="crud_operation.is_visible=false">
+        Cancelar
+      </button>
+    </form>
+
+    <table class="table table-bordered table-hover mt-4">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let per of this.lista">
+          <td [routerLink]="['/admin/persona', per.id]">
+            {{ per.id }}
+          </td>
+          <td>
+            {{ per.nombre }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btn btn-primary" (click)="new()">Mostrar</div>
+
+  </div>
+</div>
