@@ -15,6 +15,15 @@ import { PersonaComponent } from './components/persona/persona.component';
 import { PersonaShowComponent } from './components/persona/persona.show.component';
 import { PersonaEditComponent } from './components/persona/persona.edit.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CarreraComponent } from './components/carrera/carrera.component';
+import { CarreraShowComponent } from './components/carrera/carrera.show.component';
+import { CarreraEditComponent } from './components/carrera/carrera.edit.component';
+import { SeccionComponent } from './components/seccion/seccion.component';
+import { SeccionShowComponent } from './components/seccion/seccion.show.component';
+import { SeccionEditComponent } from './components/seccion/seccion.edit.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { UsuarioEditComponent } from './components/usuario/usuario.edit.component';
+import { MatriculaComponent } from './components/matricula/matricula.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +35,16 @@ import { HeaderComponent } from './components/header/header.component';
     PersonaComponent,
     PersonaShowComponent,
     PersonaEditComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarreraComponent,
+    CarreraShowComponent,
+    CarreraEditComponent,
+    SeccionComponent,
+    SeccionShowComponent,
+    SeccionEditComponent,
+    UsuarioComponent,
+    UsuarioEditComponent,
+    MatriculaComponent
   ],
   imports: [
     BrowserModule,
