@@ -4,11 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaService {
+export class MatriculaService {
   api = "https://5eb2fe44b933.ngrok.io/";
 
-  constructor(private http: HttpClient) { }
-  
+  constructor(private http: HttpClient) {
+    
+  }
   private headers = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded'
   });
@@ -23,24 +24,23 @@ export class PersonaService {
     return formBody.join('&');
   }
   index() {
-    return this.http.get(this.api + "api/auth/personas/android", {});
+    return this.http.get(this.api + "api/auth/matriculas", {});
   }
   show(id:number) {
-    return this.http.get(this.api + "api/auth/personas/" + id, {});
+    return this.http.get(this.api + "api/auth/matriculas/" + id, {});
   }
-  post(codigo:string, nombre:string, apellido:string, dni:string, telefono:string, foto:string) {
-    return this.http.post(this.api + "api/auth/personas", 
+  post(nombre:string, descripcion:string, fecha_inicio:Date, fecha_fin_inscripcion:Date, fecha_fin:Date) {
+    return this.http.post(this.api + "api/auth/matriculas", 
       this.getFormUrlEncoded({
-        'codigo': codigo,
         'nombre': nombre,
-        'apellido': apellido,
-        'dni': dni,
-        'telefono': telefono,
-        'foto': foto
+        'descripcion': descripcion,
+        'fecha_inicio': fecha_inicio,
+        'fecha_fin_inscripcion': fecha_fin_inscripcion,
+        'fecha_fin': fecha_fin
       }), {'headers': this.headers});
   }
   put(id:number, data:any) {
-    return this.http.put(this.api + "api/auth/personas/" + id, 
+    return this.http.put(this.api + "api/auth/matriculas/" + id, 
       this.getFormUrlEncoded(data),
       {
         'headers': this.headers
@@ -48,6 +48,6 @@ export class PersonaService {
     );
   }
   delete(id: number) {
-    return this.http.delete(this.api + "api/auth/personas/" + id);
+    return this.http.delete(this.api + "api/auth/olimpiadas/" + id);
   }
 }

@@ -1,0 +1,67 @@
+<div class="panel shadow mt-3" >
+    <div class="header">
+      <h2 class="title"><i class="fas fa-volleyball-ball"></i> REGISTRO OLIMPIADA</h2>
+    </div>
+    <div class="inside">
+  
+      <form (submit)="crearOlimpiada()"
+        [formGroup]="newMatriculaForm"
+        *ngIf="crud_operation.is_visible">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>
+              Carrera
+            </label>
+            <div  *ngIf="carreraObject.selected">
+            <input type="text"  class="form-control" 
+              value="{{ carreraObject.text }}" readonly 
+              *ngIf="carreraObject.selected">
+              
+            <button type="button" 
+              (click)="unselectCarrera()"
+              class="btn btn-primary">Cambiar</button>
+            </div>
+            <div class="list-group" *ngIf="!carreraObject.selected">
+              <div class="list-group-item" 
+                (click)="selectCarrera(carrera)"
+                *ngFor="let carrera of carreras">{{ carrera.nombre }}
+                <button class="btn btn-primary" type="button">Seleccionar</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">
+          Registrar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="crud_operation.is_visible=false">
+          Cancelar
+        </button>
+      </form>
+      
+      <table class="table table-bordered table-hover mt-4">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let olim of this.lista">
+            <td >
+              {{ olim.id }}
+            </td>
+            <td>
+              {{ olim.nombre }}
+            </td>
+            <td>
+              <a [routerLink]="['/admin/olimpiada', olim.id]" class="btn btn-primary">Ver</a>
+            </td>          
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn btn-primary" (click)="new()">Mostrar</div>
+  
+    </div>
+  </div>
+  
+  

@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class OlimpiadaService {
-  api = "https://protected-fjord-91518.herokuapp.com/";
+  api = "https://5eb2fe44b933.ngrok.io/";
 
   constructor(private http: HttpClient) {
     

@@ -26,7 +26,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-              
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -125,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fixtura"
+    }
+  },
+  "defaultProject": "fixtura",
+  "cli": {
+    "analytics": "f4ad1170-2fa5-48ce-aad6-75182d5210c2"
+  }
 }
