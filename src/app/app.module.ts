@@ -24,6 +24,7 @@ import { SeccionEditComponent } from './components/seccion/seccion.edit.componen
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioEditComponent } from './components/usuario/usuario.edit.component';
 import { MatriculaComponent } from './components/matricula/matricula.component';
+import { DisciplinaComponent } from './components/disciplina/disciplina.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MatriculaComponent } from './components/matricula/matricula.component';
     SeccionEditComponent,
     UsuarioComponent,
     UsuarioEditComponent,
-    MatriculaComponent
+    MatriculaComponent,
+    DisciplinaComponent
   ],
   imports: [
     BrowserModule,

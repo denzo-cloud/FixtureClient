@@ -1,0 +1,87 @@
+<div class="panel shadow mt-3">
+    <div class="header">
+        <h2 class="title"><i class="fas fa-football-ball"></i> REGISTRO DISCIPLINA</h2>
+    </div>
+    <div class="inside">
+  
+      <form (submit)="crearDisciplina()"
+        [formGroup]="newDisciplinaForm"
+        *ngIf="crud_operation.is_visible">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>
+                Nombre
+              </label>
+              <input type="text" formControlName="nombre" class="form-control">
+            </div>
+            <div class="form-group col-md-8">
+              <label>
+                Participantes
+              </label>
+              <input type="number" formControlName="participantes"
+              class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+          <label>
+            Olimpiada
+          </label>
+          <div  *ngIf="olimpiadaObject.selected" class="row">
+            <div class="col">
+              <input type="text"  class="form-control" 
+              value="{{ olimpiadaObject.text }}" readonly 
+              *ngIf="olimpiadaObject.selected">
+            </div>
+            <div class="col">
+              <button type="button" 
+              (click)="unselectOlimpiada()"
+              class="btn btn-danger"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+          <div class="list-group" *ngIf="!olimpiadaObject.selected">
+            <div class="list-group-item" 
+              (click)="selectOlimpiada(olimpiada)"
+              *ngFor="let olimpiada of olimpiadas">
+              <button class="btn btn-success mr-2" type="button">
+              <i class="fas fa-plus-circle"></i>
+              </button>
+              {{ olimpiada.nombre }}
+            </div>
+          </div>            
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">
+          Registrar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="crud_operation.is_visible=false">
+          Cancelar
+        </button>
+      </form>
+      
+      <table class="table table-bordered table-hover mt-4">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dis of this.lista">
+            <td>
+              {{ dis.id }}
+            </td>
+            <td>
+              {{ dis.nombre }}
+            </td>
+            <td>
+              <a [routerLink]="['/admin/disciplina', dis.id]" class="btn btn-info"><i class="fas fa-eye"></i> Ver</a>
+            </td>          
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn btn-primary" (click)="new()">Mostrar</div>
+  
+    </div>
+</div>
+  
+  

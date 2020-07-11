@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SeccionService {
 
-  api = "https://5eb2fe44b933.ngrok.io/";
+  api = "https://beb59831bce2.ngrok.io/";
 
   constructor(private http: HttpClient) {
 

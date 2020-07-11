@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MatriculaService {
-  api = "https://5eb2fe44b933.ngrok.io/";
+  api = "https://beb59831bce2.ngrok.io/";
 
   constructor(private http: HttpClient) {
     
